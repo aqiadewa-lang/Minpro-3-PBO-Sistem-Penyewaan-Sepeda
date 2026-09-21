@@ -5,28 +5,29 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         ArrayList<Sepeda> daftarSepeda = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
 
-        // Data bawaan untuk tes
-        daftarSepeda.add(new Sepeda("S01", "Polygon", "Mountain Bike", 50000));
-        daftarSepeda.add(new Sepeda("S02", "United", "Fixie", 35000));
+        // --- DUMMY DATA AWAL ---
+        daftarSepeda.add(new SepedaGunung("SPD-01", "Polygon Xtrada", 75000, "Hardtail"));
+        daftarSepeda.add(new SepedaListrik("SPD-02", "Selis Eagle", 100000, 10000));
 
         int pilihan = 0;
 
-        do {
-            System.out.println("\n=== MANAJEMEN DATA SEPEDA ===");
-            System.out.println("1. Tampilkan Sepeda (Read)");
-            System.out.println("2. Tambah Sepeda (Create)");
-            System.out.println("3. Ubah Data Sepeda (Update)");
-            System.out.println("4. Hapus Sepeda (Delete)");
+        while (pilihan != 5) {
+            System.out.println("\n=== SISTEM PENYEWAAN SEPEDA ===");
+            System.out.println("1. Tampilkan Daftar Sepeda");
+            System.out.println("2. Tambah Sepeda Baru");
+            System.out.println("3. Ubah Data Sepeda");
+            System.out.println("4. Hapus Sepeda");
             System.out.println("5. Keluar");
             System.out.print("Pilih menu (1-5): ");
 
+            // Validasi Input Menu
             try {
                 pilihan = Integer.parseInt(scanner.nextLine());
             } catch (NumberFormatException e) {
-                System.out.println("Input salah, masukkan angka 1-5.");
+                System.out.println("Error: Input harus berupa angka 1-5!");
                 continue;
             }
 
@@ -37,38 +38,67 @@ public class Main {
                         System.out.println("Belum ada data sepeda.");
                     } else {
                         for (Sepeda s : daftarSepeda) {
-                            System.out.println("[" + s.getIdSepeda() + "] " + s.getMerk() + " - " + s.getJenis() + " (Rp " + s.getHargaSewaPerHari() + "/hari)");
+                            System.out.println(s.getDetail());
                         }
                     }
                     break;
 
                 case 2:
-                    System.out.println("\n--- TAMBAH SEPEDA ---");
+                    System.out.println("\n--- TAMBAH SEPEDA BARU ---");
                     System.out.print("ID Sepeda: ");
                     String idBaru = scanner.nextLine();
-                    System.out.print("Merk: ");
-                    String merkBaru = scanner.nextLine();
-                    System.out.print("Jenis: ");
-                    String jenisBaru = scanner.nextLine();
                     
+                    System.out.print("Merk Sepeda: ");
+                    String merkBaru = scanner.nextLine();
+
+                    // Validasi Harga
                     double hargaBaru = 0;
                     while (true) {
                         try {
                             System.out.print("Harga Sewa/Hari: Rp ");
                             hargaBaru = Double.parseDouble(scanner.nextLine());
+                            if (hargaBaru <= 0) {
+                                System.out.println("Harga harus lebih dari 0!");
+                                continue;
+                            }
                             break;
                         } catch (NumberFormatException e) {
-                            System.out.println("Ketik angkanya saja!");
+                            System.out.println("Error: Input harga harus berupa angka!");
                         }
                     }
 
-                    daftarSepeda.add(new Sepeda(idBaru, merkBaru, jenisBaru, hargaBaru));
-                    System.out.println("Data sepeda berhasil ditambahkan.");
+                    // Pilihan Subclass (Inheritance)
+                    int jenisPilihan = 0;
+                    while (jenisPilihan != 1 && jenisPilihan != 2) {
+                        try {
+                            System.out.println("Pilih Jenis Sepeda:");
+                            System.out.println("1. Sepeda Gunung");
+                            System.out.println("2. Sepeda Listrik");
+                            System.out.print("Pilihan (1/2): ");
+                            jenisPilihan = Integer.parseInt(scanner.nextLine());
+
+                            if (jenisPilihan == 1) {
+                                System.out.print("Tipe Suspensi (misal: Full/Hardtail): ");
+                                String suspensi = scanner.nextLine();
+                                daftarSepeda.add(new SepedaGunung(idBaru, merkBaru, hargaBaru, suspensi));
+                            } else if (jenisPilihan == 2) {
+                                System.out.print("Kapasitas Baterai (mAh): ");
+                                int baterai = Integer.parseInt(scanner.nextLine());
+                                daftarSepeda.add(new SepedaListrik(idBaru, merkBaru, hargaBaru, baterai));
+                            } else {
+                                System.out.println("Pilihan tidak valid, pilih 1 atau 2.");
+                            }
+                        } catch (NumberFormatException e) {
+                            System.out.println("Error: Input harus berupa angka!");
+                        }
+                    }
+
+                    System.out.println("Data sepeda berhasil ditambahkan!");
                     break;
 
                 case 3:
                     System.out.println("\n--- UBAH SEPEDA ---");
-                    System.out.print("Masukkan ID Sepeda: ");
+                    System.out.print("Masukkan ID Sepeda yang ingin diubah: ");
                     String idEdit = scanner.nextLine();
                     boolean adaEdit = false;
 
@@ -76,16 +106,14 @@ public class Main {
                         if (s.getIdSepeda().equalsIgnoreCase(idEdit)) {
                             System.out.print("Merk Baru: ");
                             s.setMerk(scanner.nextLine());
-                            System.out.print("Jenis Baru: ");
-                            s.setJenis(scanner.nextLine());
-                            
+
                             while (true) {
                                 try {
                                     System.out.print("Harga Baru: Rp ");
                                     s.setHargaSewaPerHari(Double.parseDouble(scanner.nextLine()));
                                     break;
                                 } catch (NumberFormatException e) {
-                                    System.out.println("Ketik angkanya saja!");
+                                    System.out.println("Error: Input harga harus berupa angka!");
                                 }
                             }
                             adaEdit = true;
@@ -93,6 +121,7 @@ public class Main {
                             break;
                         }
                     }
+
                     if (!adaEdit) {
                         System.out.println("ID Sepeda tidak ditemukan.");
                     }
@@ -100,7 +129,7 @@ public class Main {
 
                 case 4:
                     System.out.println("\n--- HAPUS SEPEDA ---");
-                    System.out.print("Masukkan ID Sepeda: ");
+                    System.out.print("Masukkan ID Sepeda yang ingin dihapus: ");
                     String idHapus = scanner.nextLine();
                     boolean adaHapus = false;
 
@@ -112,20 +141,20 @@ public class Main {
                             break;
                         }
                     }
+
                     if (!adaHapus) {
                         System.out.println("ID Sepeda tidak ditemukan.");
                     }
                     break;
 
                 case 5:
-                    System.out.println("Program selesai.");
+                    System.out.println("Terima kasih, program selesai.");
                     break;
 
                 default:
-                    System.out.println("Pilihan tidak ada, pilih 1-5.");
+                    System.out.println("Pilihan menu tidak valid!");
             }
-        } while (pilihan != 5);
-
+        }
         scanner.close();
     }
 }
