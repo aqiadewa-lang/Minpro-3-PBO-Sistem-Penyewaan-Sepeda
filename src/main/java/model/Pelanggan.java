@@ -1,4 +1,4 @@
-package com.mycompany.sistem.penyewaan.sepeda;
+package model;
 
 public class Pelanggan {
     private String idPelanggan;

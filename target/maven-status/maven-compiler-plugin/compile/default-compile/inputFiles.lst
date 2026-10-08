@@ -1,6 +1,9 @@
-C:\Users\AQIAYUDHA\OneDrive\Documents\PBO\Sistem-Penyewaan-Sepeda\src\main\java\com\mycompany\sistem\penyewaan\sepeda\Main.java
-C:\Users\AQIAYUDHA\OneDrive\Documents\PBO\Sistem-Penyewaan-Sepeda\src\main\java\com\mycompany\sistem\penyewaan\sepeda\Pelanggan.java
-C:\Users\AQIAYUDHA\OneDrive\Documents\PBO\Sistem-Penyewaan-Sepeda\src\main\java\com\mycompany\sistem\penyewaan\sepeda\Sepeda.java
-C:\Users\AQIAYUDHA\OneDrive\Documents\PBO\Sistem-Penyewaan-Sepeda\src\main\java\com\mycompany\sistem\penyewaan\sepeda\SepedaGunung.java
-C:\Users\AQIAYUDHA\OneDrive\Documents\PBO\Sistem-Penyewaan-Sepeda\src\main\java\com\mycompany\sistem\penyewaan\sepeda\SepedaListrik.java
-C:\Users\AQIAYUDHA\OneDrive\Documents\PBO\Sistem-Penyewaan-Sepeda\src\main\java\com\mycompany\sistem\penyewaan\sepeda\TransaksiSewa.java
+C:\Users\AQIAYUDHA\OneDrive\Documents\PBO\Sistem-Penyewaan-Sepeda\src\main\java\controller\SepedaController.java
+C:\Users\AQIAYUDHA\OneDrive\Documents\PBO\Sistem-Penyewaan-Sepeda\src\main\java\main\Main.java
+C:\Users\AQIAYUDHA\OneDrive\Documents\PBO\Sistem-Penyewaan-Sepeda\src\main\java\model\Pelanggan.java
+C:\Users\AQIAYUDHA\OneDrive\Documents\PBO\Sistem-Penyewaan-Sepeda\src\main\java\model\Sepeda.java
+C:\Users\AQIAYUDHA\OneDrive\Documents\PBO\Sistem-Penyewaan-Sepeda\src\main\java\model\SepedaGunung.java
+C:\Users\AQIAYUDHA\OneDrive\Documents\PBO\Sistem-Penyewaan-Sepeda\src\main\java\model\SepedaListrik.java
+C:\Users\AQIAYUDHA\OneDrive\Documents\PBO\Sistem-Penyewaan-Sepeda\src\main\java\model\Sewaable.java
+C:\Users\AQIAYUDHA\OneDrive\Documents\PBO\Sistem-Penyewaan-Sepeda\src\main\java\model\TransaksiSewa.java
+C:\Users\AQIAYUDHA\OneDrive\Documents\PBO\Sistem-Penyewaan-Sepeda\src\main\java\view\MenuView.java

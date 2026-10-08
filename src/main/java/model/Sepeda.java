@@ -1,6 +1,8 @@
-package com.mycompany.sistem.penyewaan.sepeda;
+package model;
 
-public class Sepeda {
+import model.Sewaable;
+
+public abstract class Sepeda implements Sewaable {
     private String idSepeda;
     private String merk;
     private double hargaSewaPerHari;
@@ -20,7 +22,15 @@ public class Sepeda {
     public double getHargaSewaPerHari() { return hargaSewaPerHari; }
     public void setHargaSewaPerHari(double hargaSewaPerHari) { this.hargaSewaPerHari = hargaSewaPerHari; }
 
+    // Abstract method yang wajib di-override subclass
+    public abstract String getKategori();
+
+    // Implementasi interface Sewaable
+    public double hitungBiayaSewa(int lamaSewa) {
+        return hargaSewaPerHari * lamaSewa;
+    }
+
     public String getDetail() {
-        return "[" + idSepeda + "] " + merk + " - Rp " + hargaSewaPerHari + "/hari";
+        return "ID: " + idSepeda + " | Merk: " + merk + " | Harga/Hari: " + hargaSewaPerHari;
     }
 }

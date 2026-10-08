@@ -1,2 +1,9 @@
-com\mycompany\sistem\penyewaan\sepeda\SepedaGunung.class
-com\mycompany\sistem\penyewaan\sepeda\SepedaListrik.class
+model\Sepeda.class
+view\MenuView.class
+model\SepedaGunung.class
+model\Pelanggan.class
+main\Main.class
+model\Sewaable.class
+controller\SepedaController.class
+model\TransaksiSewa.class
+model\SepedaListrik.class

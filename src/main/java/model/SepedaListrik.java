@@ -1,4 +1,4 @@
-package com.mycompany.sistem.penyewaan.sepeda;
+package model;
 
 public class SepedaListrik extends Sepeda {
     private int kapasitasBaterai; // Dalam mAh
@@ -12,7 +12,12 @@ public class SepedaListrik extends Sepeda {
     public void setKapasitasBaterai(int kapasitasBaterai) { this.kapasitasBaterai = kapasitasBaterai; }
 
     @Override
+    public String getKategori() {
+        return "Sepeda Listrik";
+    }
+
+    @Override
     public String getDetail() {
-        return super.getDetail() + " | Jenis: Sepeda Listrik | Baterai: " + kapasitasBaterai + " mAh";
+        return super.getDetail() + " | Jenis: " + getKategori() + " | Baterai: " + kapasitasBaterai + " mAh";
     }
 }

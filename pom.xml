@@ -10,4 +10,5 @@
         <maven.compiler.release>26</maven.compiler.release>
         <exec.mainClass>com.mycompany.sistem.penyewaan.sepeda.Main</exec.mainClass>
     </properties>
+    <name>Minpro-3-PBO-SISTEM_PENYEWAAN_SEPEDA</name>
 </project>
