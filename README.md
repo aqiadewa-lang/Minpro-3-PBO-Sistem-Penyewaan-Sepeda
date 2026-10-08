@@ -227,8 +227,11 @@ View tidak menyimpan data sendiri, dan Model tidak mengetahui apa pun tentang ta
 
 **Screenshot 14 – Class `MenuView.java` yang memanggil `controller` (View)**
  
-[TEMPEL SCREENSHOT 15 DI SINI]
+<img width="471" height="71" alt="image" src="https://github.com/user-attachments/assets/298e8cf4-c8be-485a-8dc5-720d7d3f0567" />
+
+<img width="667" height="112" alt="image" src="https://github.com/user-attachments/assets/f9160fff-4107-4f15-9c1e-94ec194a7438" />
  
 **Screenshot 15 – Class `Main.java` (titik masuk program)**
  
-[TEMPEL SCREENSHOT 16 DI SINI]
+<img width="655" height="228" alt="image" src="https://github.com/user-attachments/assets/18092b3b-7258-4908-b98d-6afeb03048b3" />
+
