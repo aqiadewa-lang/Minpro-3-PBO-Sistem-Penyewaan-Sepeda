@@ -5,6 +5,29 @@
 
 Aplikasi Sistem Manajemen Penyewaan Sepeda adalah program berbasis konsol (CLI) yang dikembangkan menggunakan bahasa pemograman Java dengan menerapkan arsitektur MVC (Model-View-Controller) dan prinsip Pemrograman Berorientasi Objek (PBO). Tujuan utama dari program ini adalah untuk mendigitalisasi dan menyederhanakan proses operasional bisnis penyewaan sepeda—mulai dari manajemen data inventaris sepeda (seperti Sepeda Gunung dan Sepeda Listrik), pengelolaan data pelanggan, hingga pemrosesan transaksi sewa secara akurat, lengkap dengan sistem validasi input, durasi hari, dan kalkulasi diskon otomatis.
 
+# Sistem Manajemen Penyewaan Sepeda (PBO - MVC)
+
+## Deskripsi Singkat Program
+Aplikasi **Sistem Manajemen Penyewaan Sepeda** adalah program berbasis konsol (CLI) yang dikembangkan menggunakan bahasa pemograman Java dengan menerapkan arsitektur **MVC (Model-View-Controller)** dan prinsip **Pemrograman Berorientasi Objek (PBO)**. Tujuan utama dari program ini adalah untuk mendigitalisasi dan menyederhanakan proses operasional bisnis penyewaan sepeda—mulai dari manajemen data inventaris sepeda (seperti Sepeda Gunung dan Sepeda Listrik), pengelolaan data pelanggan, hingga pemrosesan transaksi sewa secara akurat, lengkap dengan sistem validasi input, durasi hari, dan kalkulasi diskon otomatis.
+
+
+## Penerapan Inheritance & Nilai Tambah Polymorphism
+* **Inheritance (Pewarisan)**: Kelas utama `Sepeda` bertindak sebagai *parent class* yang merangkum atribut umum (seperti `idSepeda`, `merk`, dan `hargaSewaPerHari`). Atribut dan fungsi ini diturunkan ke *child class* yaitu `SepedaGunung` dan `SepedaListrik` guna menghindari duplikasi kode dan menjaga struktur program tetap rapi.
+* **Polymorphism & Interface**: Program mengimplementasikan *interface* `Sewaable` yang memaksa kelas turunan untuk melakukan *method overriding* pada fungsi perhitungan biaya sewa dan detail informasi. Hal ini memungkinkan objek dari kelas berbeda (`SepedaGunung` dan `SepedaListrik`) merespons pemanggilan method yang sama (`hitungBiayaSewa()` dan `getDetail()`) dengan perilaku spesifik sesuai jenis sepedanya masing-masing.
+
+
+## Fitur Utama
+1. Tampilkan Daftar Sepeda
+2. Tambah Sepeda Baru (Sepeda Gunung / Sepeda Listrik)
+3. Ubah Data Sepeda
+4. Hapus Sepeda
+5. Buat Transaksi Sewa (Lengkap dengan kalkulasi durasi dan metode *overloading* diskon)
+
+## Cara Menjalankan Program
+1. Buka proyek melalui Apache NetBeans.
+2. Lakukan *Clean and Build* pada proyek `Minpro-3-PBO-Sistem-Penyewaan-Sepeda`.
+3. Jalankan file utama (`Main.java`) yang berada pada paket *main*.
+
 ## **2. Penjelasan Alur Program**
 Ketika program dijalankan, sistem akan menampilkan Menu Utama yang terdiri dari pilihan pengelolaan data sepeda serta menu untuk keluar.
 
