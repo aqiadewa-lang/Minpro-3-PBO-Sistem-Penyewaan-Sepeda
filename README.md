@@ -161,14 +161,10 @@ Java membedakan method mana yang dipanggil berdasarkan jumlah dan tipe parameter
  
 <img width="491" height="67" alt="image" src="https://github.com/user-attachments/assets/a54d5fad-9ad4-41a7-ae89-79be14e1fde2" />
 
-**Screenshot 9 – Output menu 5 (Buat Transaksi) untuk Sepeda Gunung: biaya normal dan biaya diskon**
+**Screenshot 9 – Output menu 5 (Buat Transaksi) untuk Sepeda Listrik: biaya normal dan biaya diskon**
  
-[TEMPEL SCREENSHOT 9 DI SINI]
- 
-**Screenshot 10 – Output menu 5 (Buat Transaksi) untuk Sepeda Listrik: biaya berbeda karena override `hitungBiayaSewa()`**
- 
-[TEMPEL SCREENSHOT 10 DI SINI]
- 
+<img width="553" height="513" alt="image" src="https://github.com/user-attachments/assets/b620edd2-a821-465f-9a7f-4fd34194f19c" />
+
 ---
  
 ## **5.3 Interface (Nilai Tambah)**
@@ -184,13 +180,15 @@ public interface Sewaable {
  
 Class `Sepeda` mengimplementasikan interface ini dengan kata kunci `implements Sewaable`, sehingga semua jenis sepeda dijamin memiliki kemampuan menghitung biaya sewa dan menampilkan detail. Interface ini juga dimanfaatkan oleh `TransaksiSewa` melalui pemanggilan `sepeda.hitungBiayaSewa(lamaSewahari)`.
  
-**Screenshot 11 – Isi interface `Sewaable.java`**
+**Screenshot 10 – Isi interface `Sewaable.java`**
  
-[TEMPEL SCREENSHOT 11 DI SINI]
+<img width="1135" height="316" alt="image" src="https://github.com/user-attachments/assets/ceff7563-72e8-4ae0-93bd-3fda4a3d0f0c" />
  
-**Screenshot 12 – Class `Sepeda` yang meng-`implements Sewaable` dan mengimplementasikan method-nya**
+**Screenshot 11 – Class `Sepeda` yang meng-`implements Sewaable` dan mengimplementasikan method-nya**
  
-[TEMPEL SCREENSHOT 12 DI SINI]
+<img width="600" height="111" alt="image" src="https://github.com/user-attachments/assets/3beca1db-82bd-461c-a31a-ba1173fa4a8c" />
+
+<img width="562" height="88" alt="image" src="https://github.com/user-attachments/assets/06f3d83b-cde2-4709-8b99-d59b5b663618" />
  
 ---
  
@@ -213,18 +211,24 @@ Program ini menggunakan arsitektur MVC yang memisahkan tanggung jawab kode ke da
 4. Saat menu Tampilkan dipilih, View meminta data dari Controller (`controller.getDaftarSepeda()`) lalu menampilkannya.
 View tidak menyimpan data sendiri, dan Model tidak mengetahui apa pun tentang tampilan. Dengan pemisahan ini kode lebih rapi dan mudah dikembangkan.
  
-**Screenshot 13 – Struktur package proyek di NetBeans (`controller`, `main`, `model`, `view`)**
+**Screenshot 12 – Struktur package proyek di NetBeans (`controller`, `main`, `model`, `view`)**
  
-[TEMPEL SCREENSHOT 13 DI SINI]
+<img width="393" height="292" alt="image" src="https://github.com/user-attachments/assets/ae693a83-434a-4125-9ab5-856e67dcfc2f" />
  
-**Screenshot 14 – Class `SepedaController.java` (Controller)**
+**Screenshot 13 – Class `SepedaController.java` (Controller)**
  
-[TEMPEL SCREENSHOT 14 DI SINI]
- 
-**Screenshot 15 – Class `MenuView.java` yang memanggil `controller` (View)**
+<img width="590" height="107" alt="image" src="https://github.com/user-attachments/assets/da76923a-97d9-49e8-9fdf-5276286c7a78" />
+
+<img width="536" height="67" alt="image" src="https://github.com/user-attachments/assets/17943fee-aeaa-4242-8895-3d6ceaea5b7c" />
+
+<img width="660" height="190" alt="image" src="https://github.com/user-attachments/assets/aab0f17f-f066-476d-a244-b2bf7d362a1b" />
+
+<img width="590" height="210" alt="image" src="https://github.com/user-attachments/assets/5554f8ab-6f37-4605-9cff-4a08e4809c99" />
+
+**Screenshot 14 – Class `MenuView.java` yang memanggil `controller` (View)**
  
 [TEMPEL SCREENSHOT 15 DI SINI]
  
-**Screenshot 16 – Class `Main.java` (titik masuk program)**
+**Screenshot 15 – Class `Main.java` (titik masuk program)**
  
 [TEMPEL SCREENSHOT 16 DI SINI]
