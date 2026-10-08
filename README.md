@@ -3,9 +3,7 @@
 
 ## **1. Deskripsi singkat program**
 
-Sistem Penyewaan Sepeda merupakan program berbasis Java yang berguna untuk mengelola data sepeda. Program ini dijalankan melalui console dan menggunakan ArrayList untuk menyimpan data selama programnya berjalan.
-
-Program ini berfokus pada fitur CRUD (Create, Read, Update, Delete) untuk pengelolaan data sepeda, yaitu menambah, melihat, mengubah, dan menghapus data sepeda.
+Aplikasi Sistem Manajemen Penyewaan Sepeda adalah program berbasis konsol (CLI) yang dikembangkan menggunakan bahasa pemograman Java dengan menerapkan arsitektur MVC (Model-View-Controller) dan prinsip Pemrograman Berorientasi Objek (PBO). Tujuan utama dari program ini adalah untuk mendigitalisasi dan menyederhanakan proses operasional bisnis penyewaan sepeda—mulai dari manajemen data inventaris sepeda (seperti Sepeda Gunung dan Sepeda Listrik), pengelolaan data pelanggan, hingga pemrosesan transaksi sewa secara akurat, lengkap dengan sistem validasi input, durasi hari, dan kalkulasi diskon otomatis.
 
 ## **2. Penjelasan Alur Program**
 Ketika program dijalankan, sistem akan menampilkan Menu Utama yang terdiri dari pilihan pengelolaan data sepeda serta menu untuk keluar.
