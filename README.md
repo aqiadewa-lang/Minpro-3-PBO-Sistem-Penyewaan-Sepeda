@@ -94,11 +94,13 @@ Di dalam `Sepeda` terdapat **abstract method** `getKategori()`. Method ini hanya
  
 **Screenshot 1 – Deklarasi abstract class dan abstract method (`Sepeda.java`)**
  
-[TEMPEL SCREENSHOT 1 DI SINI]
+<img width="570" height="92" alt="image" src="https://github.com/user-attachments/assets/24f5eb3d-9a5a-4f6f-881c-37806a0c778f" />
+
+<img width="605" height="46" alt="image" src="https://github.com/user-attachments/assets/7ee90d4f-64b4-4db8-9acf-99a57c317e4e" />
+
+**Screenshot 2 – Implementasi abstract method `getKategori()` pada subclass (`SepedaGunung.java`)**
  
-**Screenshot 2 – Implementasi abstract method `getKategori()` pada subclass (`SepedaGunung.java` dan `SepedaListrik.java`)**
- 
-[TEMPEL SCREENSHOT 2 DI SINI]
+<img width="402" height="92" alt="image" src="https://github.com/user-attachments/assets/46c37d90-2a93-409c-b0c8-27a72671eba2" />
  
 ---
  
@@ -123,19 +125,19 @@ Bukti polymorphism terlihat pada method `tampilkanSepeda()` di `MenuView`. List 
  
 **Screenshot 3 – Method `hitungBiayaSewa()` di `Sepeda` dan hasil override di subclass**
  
-[TEMPEL SCREENSHOT 3 DI SINI]
+<img width="552" height="78" alt="image" src="https://github.com/user-attachments/assets/8cc619cf-15f0-45f3-bc4e-63451c1f1973" />
+
+**Screenshot 4 – Override `getDetail()` pada `SepedaGunung`**
  
-**Screenshot 4 – Override `getDetail()` pada `SepedaGunung` dan `SepedaListrik`**
- 
-[TEMPEL SCREENSHOT 4 DI SINI]
- 
+<img width="1005" height="113" alt="image" src="https://github.com/user-attachments/assets/cd42d795-0bbd-46b5-98b2-129ba7de79be" />
+
 **Screenshot 5 – Pemanggilan polymorphic `s.getDetail()` pada `MenuView.tampilkanSepeda()`**
  
-[TEMPEL SCREENSHOT 5 DI SINI]
+<img width="703" height="226" alt="image" src="https://github.com/user-attachments/assets/799a3b4c-55c9-4528-b48b-5b8398d3acff" />
  
 **Screenshot 6 – Output menu 1 (Tampilkan Daftar Sepeda): detail berbeda untuk tiap jenis sepeda**
  
-[TEMPEL SCREENSHOT 6 DI SINI]
+<img width="856" height="402" alt="image" src="https://github.com/user-attachments/assets/a80ade3a-1dc6-4e9f-965b-5b685153eede" />
  
 ### **b. Overloading**
  
@@ -151,12 +153,14 @@ Java membedakan method mana yang dipanggil berdasarkan jumlah dan tipe parameter
  
 **Screenshot 7 – Dua method `hitungTotalBiaya` pada `TransaksiSewa.java`**
  
-[TEMPEL SCREENSHOT 7 DI SINI]
+<img width="612" height="73" alt="image" src="https://github.com/user-attachments/assets/541aaad3-c4e5-4da6-977e-78d7277fdb76" />
+
+<img width="647" height="91" alt="image" src="https://github.com/user-attachments/assets/78c7d5b9-4edf-4296-bd91-ea2e1438df01" />
  
 **Screenshot 8 – Dua constructor pada `SepedaGunung.java`**
  
-[TEMPEL SCREENSHOT 8 DI SINI]
- 
+<img width="491" height="67" alt="image" src="https://github.com/user-attachments/assets/a54d5fad-9ad4-41a7-ae89-79be14e1fde2" />
+
 **Screenshot 9 – Output menu 5 (Buat Transaksi) untuk Sepeda Gunung: biaya normal dan biaya diskon**
  
 [TEMPEL SCREENSHOT 9 DI SINI]
